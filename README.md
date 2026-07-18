@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# trip.alileza.me — Indonesia Trip with Ali
 
-## Getting Started
+A small Next.js app: guests answer a short quiz and get a tailored Jan–Feb
+Indonesia trip drawn on a map (Java → Bali → Nusa Tenggara). Fully client-side,
+statically exported, hosted on GitHub Pages.
 
-First, run the development server:
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Content lives in `src/data/` (`places.ts`, `trips.ts`, `quiz.ts`); the ranking
+logic is in `src/lib/recommend.ts`; the map is a dependency-free SVG in
+`src/components/IndonesiaMap.tsx`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build the static site
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build      # emits ./out (configured via output: "export")
+```
 
-## Learn More
+## Deploy to GitHub Pages
 
-To learn more about Next.js, take a look at the following resources:
+Deployment is automatic via `.github/workflows/deploy.yml` — every push to
+`main` builds and publishes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+One-time setup in the GitHub repo:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Settings → Pages → Build and deployment → Source: GitHub Actions.**
+2. Push to `main`. The workflow builds and deploys `./out`.
+3. **Custom domain:** the build ships a `CNAME` file (`public/CNAME`) with
+   `trip.alileza.me`. At the DNS for `alileza.me`, add:
 
-## Deploy on Vercel
+   ```
+   CNAME   trip   alileza.github.io.
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   Then in **Settings → Pages**, confirm the custom domain is `trip.alileza.me`
+   and enable **Enforce HTTPS** once the certificate is issued.
