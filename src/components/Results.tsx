@@ -23,11 +23,11 @@ export default function Results({ answers, onRestart }: Props) {
       <header className="pt-14 text-center">
         <p className="text-sm font-semibold uppercase tracking-widest text-teal">Your trip DNA</p>
         <h1 className="mt-3 font-display text-4xl text-ink sm:text-5xl">
-          Here&apos;s what fits you three
+          Here&apos;s what fits you
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-ink-soft">
           Based on your answers, ranked for a Jan–Feb trip. Hover the map to explore each stop —
-          then send Ali your favourite.
+          then pick your favourite.
         </p>
       </header>
 
@@ -89,7 +89,7 @@ export default function Results({ answers, onRestart }: Props) {
       <div className="mt-16 flex flex-col items-center gap-4 border-t border-deep/10 pt-10 text-center">
         <p className="max-w-lg text-ink-soft">
           These are starting points, not fixed plans — every one bends around your dates and
-          budget. Ali knows the ground truth.
+          budget. Local know-how fills in the rest.
         </p>
         <button
           onClick={onRestart}

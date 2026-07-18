@@ -1,4 +1,4 @@
-# trip.alileza.me — Indonesia Trip with Ali
+# trip.alileza.me — Indonesia Trip planner
 
 A small Next.js app: guests answer a short quiz and get a tailored Jan–Feb
 Indonesia trip drawn on a map (Java → Bali → Nusa Tenggara). Fully client-side,

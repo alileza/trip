@@ -30,14 +30,14 @@ export default function Hero({ onStart }: Props) {
           🇮🇩 January – February · rainy season, low crowds
         </span>
         <h1 className="font-display text-5xl leading-[1.05] text-white sm:text-7xl">
-          Come explore
+          What should your
           <br />
-          <span className="text-gold">Indonesia</span> with me
+          <span className="text-gold">Indonesia</span> trip be?
         </h1>
         <p className="mx-auto mt-6 max-w-xl text-lg text-white/80">
-          I&apos;m Ali — Indonesian, based in Berlin, heading home this January. Tell me what
-          you&apos;re into in eight quick questions and I&apos;ll map the trip that actually fits
-          you: temples, volcanoes, reefs, or just a hammock and a very good coffee.
+          Heading to Indonesia this January–February? Answer eight quick questions and we&apos;ll
+          map the trip that actually fits you: temples, volcanoes, reefs, or just a hammock and a
+          very good coffee.
         </p>
         <button
           onClick={onStart}

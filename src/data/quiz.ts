@@ -35,7 +35,7 @@ export const QUESTIONS: Question[] = [
     id: "days",
     kind: "single",
     title: "How long on the ground in Indonesia?",
-    subtitle: "Roughly — you might fly home before Ali does.",
+    subtitle: "Roughly — some of you might fly home earlier than others.",
     choices: [
       { value: "6", label: "A quick week", hint: "≈ 5–7 days", emoji: "⏳" },
       { value: "9", label: "8–10 days", hint: "one region, done well", emoji: "🗓️" },

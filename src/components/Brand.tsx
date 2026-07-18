@@ -4,7 +4,7 @@ interface Props {
   className?: string;
 }
 
-// Simple wordmark: a compass-rose glyph + "Explore with Ali".
+// Simple wordmark: a compass-rose glyph + "Indonesia Trip".
 export default function Brand({ tone = "dark", className = "" }: Props) {
   const text = tone === "light" ? "text-white" : "text-ink";
   const sub = tone === "light" ? "text-white/60" : "text-ink-soft";
@@ -19,7 +19,7 @@ export default function Brand({ tone = "dark", className = "" }: Props) {
       </span>
       <span className="leading-tight">
         <span className={`block font-display text-lg font-semibold ${text}`}>Indonesia Trip</span>
-        <span className={`block text-[11px] uppercase tracking-widest ${sub}`}>with Ali · trip.alileza.me</span>
+        <span className={`block text-[11px] uppercase tracking-widest ${sub}`}>Java · Bali · Nusa Tenggara</span>
       </span>
     </span>
   );
